@@ -18,6 +18,12 @@ dnf install -y openssh-server && systemctl enable sshd && systemctl start sshd
 
 Jodi original sed style e chai (SSHD file thakle only)
 -
+primary command 
+-
+touch /etc/ssh/sshd_config && echo -e "PermitRootLogin yes\nPasswordAuthentication yes" > /etc/ssh/sshd_config && systemctl restart sshd
+
+second command jodi kaz na kore 
+-
 sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config && systemctl restart sshd
 
 
